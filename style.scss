@@ -36,6 +36,11 @@
 .block{
     padding: 24px 20px;
 
+    &__header{
+        display: flex;
+        justify-content: space-between;
+    }
+
     &__title{
         font-family: var(--font-family);
         font-weight: 500;
@@ -50,13 +55,13 @@
 }
 
 .wrapper{
-
+    overflow: hidden;
 }
 
 // button - btn
 
 .btn{
-    padding: 8px;
+    padding: 7px 8px;
 
     display: flex;
     justify-content: center;
@@ -125,6 +130,33 @@
     }
 }
 
+.slider-controller{
+    padding: 4px;
+
+    border-radius: 100px;
+    border: 1px solid #eceff8;
+
+    display: flex;
+    align-items: center;
+
+    &__item{
+        width: 28px;
+        aspect-ratio: 1;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        background: none;
+        border: none;
+
+        & svg{
+            width: 12px;
+            aspect-ratio: 1;
+        }
+    }
+}
+
 .btn-interactive{
     margin-left: 8px;
     &:first-child{
@@ -152,6 +184,8 @@
 
 .receipts{
     margin-top: 12px;
+
+    padding-bottom: 18px;
 
     &__item{
         width: 156px;
@@ -344,4 +378,32 @@
     &__controller{
         margin-top: 12px;
     }
+}
+
+
+.swiper-receipts{
+    position: relative;
+}
+.swiper-receipts .slider-controller{
+    display: none;
+}
+.swiper-receipts .swiper-pagination{
+    bottom: 0;
+
+    text-align: start;
+
+    display: flex;
+}
+.swiper-receipts .swiper-pagination-bullet{
+    &:first-child{
+        margin-left: 0;
+    }
+
+    width: 6px;
+    height: 6px;
+
+    background-color: #cbcfd3;
+}
+.swiper-receipts .swiper-pagination-bullet-active{
+    background-color: var(--blue);
 }

@@ -29,6 +29,10 @@
 .block {
   padding: 24px 20px;
 }
+.block__header {
+  display: flex;
+  justify-content: space-between;
+}
 .block__title {
   font-family: var(--font-family);
   font-weight: 500;
@@ -40,8 +44,12 @@
   background-color: var(--background-blue);
 }
 
+.wrapper {
+  overflow: hidden;
+}
+
 .btn {
-  padding: 8px;
+  padding: 7px 8px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -96,6 +104,27 @@
   border-radius: 7px;
 }
 
+.slider-controller {
+  padding: 4px;
+  border-radius: 100px;
+  border: 1px solid #eceff8;
+  display: flex;
+  align-items: center;
+}
+.slider-controller__item {
+  width: 28px;
+  aspect-ratio: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  border: none;
+}
+.slider-controller__item svg {
+  width: 12px;
+  aspect-ratio: 1;
+}
+
 .btn-interactive {
   margin-left: 8px;
   width: 32px;
@@ -118,6 +147,7 @@
 
 .receipts {
   margin-top: 12px;
+  padding-bottom: 18px;
 }
 .receipts__item {
   width: 156px;
@@ -276,4 +306,31 @@
 }
 .receipts__controller {
   margin-top: 12px;
+}
+
+.swiper-receipts {
+  position: relative;
+}
+
+.swiper-receipts .slider-controller {
+  display: none;
+}
+
+.swiper-receipts .swiper-pagination {
+  bottom: 0;
+  text-align: start;
+  display: flex;
+}
+
+.swiper-receipts .swiper-pagination-bullet {
+  width: 6px;
+  height: 6px;
+  background-color: #cbcfd3;
+}
+.swiper-receipts .swiper-pagination-bullet:first-child {
+  margin-left: 0;
+}
+
+.swiper-receipts .swiper-pagination-bullet-active {
+  background-color: var(--blue);
 }/*# sourceMappingURL=style.css.map */
