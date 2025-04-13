@@ -59,3 +59,25 @@ function addControllerCounter(counter) {
 
     counter.classList.remove('ready')
 }
+
+
+// form
+document.querySelectorAll('.confirmation').forEach(checkbox => {
+    checkbox.onclick = function () {
+        checkbox.classList.toggle('active');
+    }
+})
+
+document.querySelectorAll('form').forEach(form => {
+    form.querySelector('input[type="submit"]').onclick = function () {
+        let validity = Array.from(form.querySelectorAll('input')).find(e => {
+            if (e.checkValidity()) return true;
+        })
+        
+        if (validity) {
+            form.classList.add('check');
+        }else{
+            form.classList.remove('check');
+        }
+    }
+})
