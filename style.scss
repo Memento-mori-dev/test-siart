@@ -116,6 +116,11 @@
         background-color: var(--blue);
         color: var(--white);
     }
+
+    &_modal{
+        background-color: var(--background-blue-sat);
+        color: var(--blue);
+    }
 }
 
 .counter{
@@ -202,8 +207,19 @@
     }
 }
 
-.submit{
+.close{
+    width: 28px;
+    aspect-ratio: 1;
 
+    padding: 6px;
+
+    border-radius: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--background-blue-sat);
 }
 
 // input
@@ -550,9 +566,6 @@
         color: var(--text-grey);
     }
 }
-
-
-
 .form-question{
     // margin-top: 28px;
     margin-top: 31px;
@@ -604,5 +617,97 @@
             line-height: 133%;
             color: var(--text-grey);
         }
+    }
+}
+
+
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    background: rgba(0, 0, 0, 0.1);
+
+    z-index: 1000;
+
+    pointer-events: none;
+    opacity: 0;
+
+    &.active{
+        pointer-events: auto;
+        opacity: 1;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__item{
+        display: none;
+
+        width: 100%;
+        height: 100%;
+
+        &.active{
+            display: block;
+        }
+    }
+}
+
+.modal-submit{
+    width: 100%;
+    height: 100%;
+
+    padding: 107px 28px 28px 28px;
+
+    background-color: var(--white);
+
+    position: relative;
+    &__close{
+        position: absolute;
+        top: 28px;
+        right: 28px;
+    }
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__img{
+        width: 80px;
+        aspect-ratio: 1;
+    }
+
+    &__content{
+        margin-top: 16px;
+    }
+    &__title{
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 171%;
+        text-align: center;
+        color: var(--text-black);
+    }
+    &__text{
+        margin-top: 4px;
+
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 167%;
+        text-align: center;
+        color: var(--text-grey);
+    }
+
+    &__ready{
+        margin-top: 16px;
+
+        display: flex;
+        justify-content: center;
     }
 }

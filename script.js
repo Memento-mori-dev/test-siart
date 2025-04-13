@@ -81,3 +81,74 @@ document.querySelectorAll('form').forEach(form => {
         }
     }
 })
+
+
+// modal
+
+openModal(document.querySelector('#thank-form'), document.querySelector('#thank'));
+
+function openModal(form, modal) {
+    form.addEventListener('submit', function() {
+        document.querySelector('.modal').classList.add('active');
+        modal.classList.add('active');
+        form.reset();
+        form.classList.remove('check');
+    })
+}
+
+closeModal(document.querySelectorAll('.close'));
+closeModal(document.querySelectorAll('.ready-modal'));
+
+function closeModal(buttons) {
+    buttons.forEach(button => {
+        button.onclick = function () {
+            document.querySelector('.modal.active').classList.remove('active');
+            document.querySelector('.modal__item.active').classList.remove('active');
+        }
+    })
+}
+
+
+// mask phone
+
+let phoneInputs = document.querySelectorAll('input[type=phone]');
+
+phoneInputs.forEach(phoneInput => {
+    phoneInput.onfocus = function (event) {
+        let value = phoneInput.value;
+
+        if (value.length == 0) {
+            phoneInput.value = '+7 '
+        }
+    }
+
+    phoneInput.addEventListener('input', function(event) {
+        let value = phoneInput.value,
+            data = event.data,
+            length = value.length;
+
+        if (value.charAt(0) == '+' && length == 1) return;
+
+        if (isNaN(data)) {
+            phoneInput.value = value.slice(0, -1);
+        }
+    
+        if (typeof data != 'object') {
+            if (length == 2 || length == 6 || length == 10) {
+                phoneInput.value = value + ' ';
+            }
+            if (length == 3 || length == 7 || length == 11) {
+                if (data != ' ') {
+                    phoneInput.value = value.slice(0, -1) + ' ' + data;
+                }
+            }
+        }
+        
+        if (length <= 3) {
+            phoneInput.value = '+7 '
+        }
+
+        console.log(event.validity);
+        
+    });
+})

@@ -490,15 +490,15 @@
                     </div>
                 </div>
 
-                <form action="" class="form-question">
+                <form action="" class="form-question" id="thank-form">
                     <div class="form-question__main"> 
                         <input type="text" placeholder="Имя*" class="input" required>
                         <p class="input-warning input-warning_red">Поле обязательно к заполнению</p>
 
-                        <input type="text" placeholder="Телефон*" class="input" required>
+                        <input type="phone" pattern="\+7\s[0-9]{3}\s[0-9]{3}\s[0-9]{4}" minlength="15" maxlength="15" placeholder="Телефон*" class="input" required>
                         <p class="input-warning input-warning_red">Поле обязательно к заполнению</p>
 
-                        <input type="text" placeholder="E-mail*" class="input" required>
+                        <input type="email" placeholder="E-mail*" class="input" required>
                         <p class="input-warning input-warning_red">Поле обязательно к заполнению</p>
                     </div>
 
@@ -524,6 +524,29 @@
         </div>
     </div>
 </body>
+
+<div class="modal ">
+    <div class="modal__item " id="thank">
+        <div class="modal-submit">
+            <div class="modal-submit__close close">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 3L13 13M13 3L3 13" stroke="#4092F1" stroke-width="2" stroke-linecap="round" />
+                </svg>
+            </div>
+
+            <img src="img/svg/Иконка спасибо.svg" alt="смайл" class="modal-submit__img">
+
+            <div class="modal-submit__content">
+                <p class="modal-submit__title">Спасибо!</p>
+                <p class="modal-submit__text">Вопрос отправлен</p>
+            </div>
+
+            <div class="modal-submit__ready">
+                <button class="btn btn_small btn_modal ready-modal">Хорошо :)</button>
+            </div>
+        </div>
+    </div>
+</div>
 
 <template id="template-counter">
     <div class="counter ready">
