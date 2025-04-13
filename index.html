@@ -473,6 +473,56 @@
             </div>
         </div>
     </div>
+
+    <div class="block">
+        <div class="wrapper">
+            <div class="form-wrapper">
+                <div class="form-wrapper__header">
+                    <img src="img/svg/form-icon.svg" alt="" class="form-wrapper__icon">
+
+                    <div class="form-wrapper__question-wrapper">
+                        <p class="form-wrapper__title">
+                            Не нашли ответа на свой вопрос?
+                        </p>
+                        <p class="form-wrapper__sub-title">
+                            Напишите нам, и мы предоставим необходимую информацию.
+                        </p>
+                    </div>
+                </div>
+
+                <form action="" class="form-question">
+                    <div class="form-question__main"> 
+                        <input type="text" placeholder="Имя*" class="input" required>
+                        <p class="input-warning input-warning_red">Поле обязательно к заполнению</p>
+
+                        <input type="text" placeholder="Телефон*" class="input" required>
+                        <p class="input-warning input-warning_red">Поле обязательно к заполнению</p>
+
+                        <input type="text" placeholder="E-mail*" class="input" required>
+                        <p class="input-warning input-warning_red">Поле обязательно к заполнению</p>
+                    </div>
+
+                    <textarea name="" id="" placeholder="Вопрос" class="input form-question__text"></textarea>
+
+                    <div class="form-question__control">
+                        <input type="submit" value="Задать вопрос" class="btn btn_small btn_submit">
+
+                        <div class="form-question__confirmation">
+                            <div class="confirmation">
+                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8.75 2.5L4.24342 7.5L1.25 4.375" stroke="#4092F1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+
+                                <input type="checkbox" name="" id="" required>
+                            </div>
+
+                            <p class="form-question__agreement">Я согласен с условиями <a href="#">пользовательского соглашения</a>.</p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 </body>
 
 <template id="template-counter">
