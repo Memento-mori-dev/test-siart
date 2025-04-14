@@ -25,6 +25,10 @@ const receiptsSwiper = new Swiper('.swiper-receipts', {
         1024: {
             slidesPerView: 5,
             spaceBetween: 16,
+        },
+        1920: {
+            slidesPerView: 5,
+            spaceBetween: 20,
         }
     }
 });

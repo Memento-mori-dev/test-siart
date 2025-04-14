@@ -232,7 +232,12 @@
 }
 
 // input
-
+.input-wrapper{
+    margin-top: 8px;
+    &:first-child{
+        margin-top: 0;
+    }
+}
 .input{
     margin-top: 8px;
     &:first-child{
@@ -913,5 +918,174 @@
     .modal-submit__close{
         top: 0;
         right: -40px;
+    }
+}
+
+@media (min-width: 1920px) {
+    .block{
+        padding: 68px;
+    }
+
+    .wrapper{
+        max-width: 1660px;
+    }
+
+    .block__title{
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 129%;
+    }
+
+    .receipts{
+        margin-top: 24px;
+    }
+
+    .receipts__item{
+        height: auto;
+
+        padding: 8px 12px 12px;
+    }
+    .receipts__img-wrapper{
+        height: 184px;
+    }
+    .receipts__interactive{
+        top: 4.5px;
+        right: 3px;
+    }
+    .receipts__detail{
+        bottom: 0;
+    }
+    .receipts__article{
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 133%;
+    }
+
+    .receipts__description{
+        margin-top: 12px;
+    }
+    .receipts__name{
+        min-height: 72px;
+
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+    }
+
+    .receipts__tags{
+        margin-top: 12px;
+    }
+    .receipts-tags__item{
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 133%;
+    }
+
+    .receipts__price-wrapper{
+        margin-top: 20px;
+    }
+    .receipts__price-val{
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 120%;
+    }
+    .receipts__price-mark{
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+    }
+    .receipts__old-price{
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+    }
+
+    .receipts__controller{
+        margin-top: 20px;
+    }
+
+    .btn{
+        padding: 14px;
+
+        & p{
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 150%;
+        }
+    }
+
+    .counter__add{
+        width: 48px;
+
+        & svg{
+            width: 24px;
+        }
+    }
+    .counter__input{
+        width: calc(100% - 112px);
+    }
+
+    .form-wrapper{
+        padding: 20px 32px;
+    }
+
+    .form-wrapper__icon{
+        width: 60px;
+        height: 60px;    
+    }
+    .form-wrapper__title{
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 140%;
+    }
+    .form-wrapper__sub-title{
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+    }
+
+    .input{
+        padding: 14px 16px;
+
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+    }
+    .input-warning{
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 133%;
+    }
+
+    .form-question__text{
+        height: 132px;
+    }
+
+    .btn_small{
+        min-width: 256px;
+
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+    }
+
+    .form-question__agreement{
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 143%;
+    }
+
+    .modal-submit__img{
+        width: 100px;
+    }
+    .modal-submit__title{
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 140%;
+    }
+    .modal-submit__text{
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 143%;
     }
 }
