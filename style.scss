@@ -801,6 +801,117 @@
     }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1400px) {
+    .btn-interactive{
+        margin-left: 4px;
 
+        width: 28px;
+        height: 28px;
+
+        & svg{
+            width: 16px;
+        }
+    }
+
+    .wrapper{
+        max-width: 1184px;
+    }
+
+    .receipts__item{
+        height: 336px;
+
+        padding: 8px 12px;
+    }
+    .receipts__img-wrapper{
+        height: 140px;
+    }
+
+    .receipts__tags{
+        margin-top: 8px;
+    }
+    .receipts-tags__item{
+        padding: 4px 8px;
+
+        font-weight: 700;
+        font-size: 10px;
+        line-height: 120%;
+    }
+
+    .receipts__price-wrapper{
+        height: auto;
+
+        flex-direction: row;
+        align-items: end;
+    }
+    .receipts__price{
+        padding: 0;
+    }
+    .receipts__old-price{
+        padding-top: 0;
+        padding-left: 12px;
+    }
+
+    .form-wrapper{
+        padding: 16px 24px;
+    }
+
+    .form-wrapper__icon{
+        margin-top: 0;
+
+        width: 48px;
+        height: 48px;
+    }
+    .form-wrapper__question-wrapper{
+        margin-left: 20px;
+    }
+    .form-wrapper__sub-title{
+        margin-top: 4px;
+    }
+
+    .form-question{
+        margin-top: 16px;
+    }
+
+    .btn_small{
+        min-width: 224px;
+    }
+
+    .modal__item.active{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .modal-submit{
+        width: 422px;
+        height: auto;
+        
+        padding: 28px;
+
+        border-radius: 24px;
+    }
+    .modal-submit__img{
+        width: 99px;
+    }
+    .modal-submit__content{
+        margin-top: 24px;
+    }
+    .modal-submit__title{
+        font-size: 16px;
+        line-height: 150%;
+    }
+    .modal-submit__ready{
+        margin-top: 24px;
+
+        width: 100%;
+
+        & .btn{
+            width: 100%;
+        }
+    }
+
+    .modal-submit__close{
+        top: 0;
+        right: -40px;
+    }
 }

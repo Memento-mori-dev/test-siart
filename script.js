@@ -24,6 +24,7 @@ const receiptsSwiper = new Swiper('.swiper-receipts', {
         },
         1024: {
             slidesPerView: 5,
+            spaceBetween: 16,
         }
     }
 });
@@ -105,6 +106,7 @@ function openModal(form, modal) {
         modal.classList.add('active');
         form.reset();
         form.classList.remove('check');
+        form.querySelector('.confirmation.active').classList.remove('active');
     })
 }
 
