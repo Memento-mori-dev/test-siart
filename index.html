@@ -491,15 +491,21 @@
                 </div>
 
                 <form action="" class="form-question" id="thank-form">
-                    <div class="form-question__main"> 
-                        <input type="text" placeholder="Имя*" class="input" required>
-                        <p class="input-warning input-warning_red">Поле обязательно к заполнению</p>
+                    <div class="form-question__main">
+                        <div class="input-wrapper">
+                            <input type="text" placeholder="Имя*" class="input" required>
+                            <p class="input-warning input-warning_red">Поле обязательно к заполнению</p>
+                        </div>
 
-                        <input type="phone" pattern="\+7\s[0-9]{3}\s[0-9]{3}\s[0-9]{4}" minlength="15" maxlength="15" placeholder="Телефон*" class="input" required>
-                        <p class="input-warning input-warning_red">Поле обязательно к заполнению</p>
+                        <div class="input-wrapper">
+                            <input type="phone" pattern="\+7\s[0-9]{3}\s[0-9]{3}\s[0-9]{4}" minlength="15" maxlength="15" placeholder="Телефон*" class="input" required>
+                            <p class="input-warning input-warning_red">Поле обязательно к заполнению</p>
+                        </div>
 
-                        <input type="email" placeholder="E-mail*" class="input" required>
-                        <p class="input-warning input-warning_red">Поле обязательно к заполнению</p>
+                        <div class="input-wrapper">
+                            <input type="email" placeholder="E-mail*" class="input" required>
+                            <p class="input-warning input-warning_red">Поле обязательно к заполнению</p>
+                        </div>
                     </div>
 
                     <textarea name="" id="" placeholder="Вопрос" class="input form-question__text"></textarea>

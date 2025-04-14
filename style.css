@@ -46,6 +46,8 @@
 }
 
 .wrapper {
+  margin: auto;
+  max-width: 655px;
   overflow: hidden;
 }
 
@@ -80,7 +82,7 @@
 }
 .btn_small {
   min-width: 200px;
-  padding: 7px 8px;
+  padding: 8px 8px;
   border: none;
   border-radius: 8px;
   font-family: var(--font-family);
@@ -131,13 +133,17 @@
   align-items: center;
 }
 .slider-controller__item {
+  margin-left: 6px;
   width: 28px;
-  aspect-ratio: 1;
+  height: 26px;
   display: flex;
   justify-content: center;
   align-items: center;
   background: none;
   border: none;
+}
+.slider-controller__item:first-child {
+  margin-left: 0;
 }
 .slider-controller__item svg {
   width: 12px;
@@ -250,7 +256,7 @@
   padding-bottom: 18px;
 }
 .receipts__item {
-  width: 156px;
+  width: 100%;
   height: 364px;
   padding: 8px;
   background-color: var(--background-white);
@@ -265,6 +271,8 @@
 .receipts__img {
   width: 100%;
   height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .receipts__interactive {
   position: absolute;
@@ -578,4 +586,72 @@
   margin-top: 16px;
   display: flex;
   justify-content: center;
+}
+
+@media (min-width: 640px) {
+  .form-wrapper__title, .form-wrapper__sub-title {
+    font-size: 14px;
+  }
+  .form-question {
+    margin-top: 28px;
+  }
+  .form-question__control {
+    width: 100%;
+    flex-direction: row;
+  }
+  .form-question__confirmation {
+    margin-top: 0;
+    margin-left: 20px;
+  }
+  .form-question__agreement {
+    max-width: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .wrapper {
+    max-width: 100%;
+  }
+  .block {
+    padding: 48px 36px;
+  }
+  .block__title {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 133%;
+  }
+  .swiper-receipts .slider-controller {
+    display: flex;
+  }
+  .receipts {
+    margin-top: 20px;
+    padding-bottom: 0;
+  }
+  .swiper-receipts .swiper-pagination {
+    display: none;
+  }
+  .form-wrapper__question-wrapper {
+    margin-left: 12px;
+  }
+  .form-wrapper__title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+  }
+  .form-wrapper__sub-title {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 143%;
+  }
+  .form-question__main {
+    display: flex;
+    justify-content: space-between;
+  }
+  .input-wrapper {
+    margin-top: 0;
+    width: calc(33.3% - 8px);
+  }
+  .form-question__text {
+    margin-top: 12px;
+    height: 68px;
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -14,6 +14,15 @@ const receiptsSwiper = new Swiper('.swiper-receipts', {
       nextEl: '.swiper-next',
       prevEl: '.swiper-prev',
     },
+
+    breakpoints: {
+        640: {
+            slidesPerView: 3,
+        },
+        768: {
+            slidesPerView: 4,
+        },
+    }
 });
 
 document.querySelectorAll('.add-cart').forEach(cart => {
@@ -110,10 +119,7 @@ function closeModal(buttons) {
 
 
 // mask phone
-
-let phoneInputs = document.querySelectorAll('input[type=phone]');
-
-phoneInputs.forEach(phoneInput => {
+document.querySelectorAll('input[type=phone]').forEach(phoneInput => {
     phoneInput.onfocus = function (event) {
         let value = phoneInput.value;
 
@@ -147,8 +153,5 @@ phoneInputs.forEach(phoneInput => {
         if (length <= 3) {
             phoneInput.value = '+7 '
         }
-
-        console.log(event.validity);
-        
     });
 })
